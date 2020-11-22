@@ -1,0 +1,29 @@
+%text-gradient {
+  color: $color-primary;
+  background: -webkit-linear-gradient(left, $color-primary, $color-secondary);
+  background: -o-linear-gradient(right, $color-primary, $color-secondary);
+  background: -moz-linear-gradient(right, $color-primary, $color-secondary);
+  background: linear-gradient(to right, $color-primary, $color-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+%bg-gradient {
+  background: rgb(58, 204, 218);
+  background: linear-gradient(
+    45deg,
+    rgba(58, 204, 218, 1) 0%,
+    rgba(82, 215, 83, 1) 100%
+  );
+}
+
+%border-gradient {
+  border: 3px solid;
+  border-radius: 20px;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    45deg,
+    rgba(58, 204, 218, 1) 0%,
+    rgba(82, 215, 83, 1) 100%
+  );
+}
