@@ -1,5 +1,9 @@
 <template>
-  <a href="" class="contact">
+  <a
+    href="https://api.whatsapp.com/send?phone=+5541999999999&text=Informações planos"
+    class="contact"
+    target="_blank"
+  >
     FALE COM A GENTE
     <i class="fab fa-whatsapp"></i>
   </a>
