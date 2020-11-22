@@ -24,10 +24,14 @@ body {
 .limit-grid {
   width: 100%;
   margin: 0px auto;
-  padding: 0 35px;
+  padding: 0 20px;
 
   @include media('>=large') {
     max-width: 1280px;
+  }
+  @include media('>=ex-large') {
+    max-width: initial;
+    padding: 0 10vw;
   }
 }
 </style>

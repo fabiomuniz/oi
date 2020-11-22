@@ -34,6 +34,10 @@ export default {
       border-radius: 29px;
       height: 58px;
       padding: 0 31px;
+      display: none;
+      @include media('>=large') {
+        display: inline-flex;
+      }
     }
   }
 }

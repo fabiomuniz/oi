@@ -13,10 +13,14 @@ export default {};
   background-color: $color-white;
   text-transform: uppercase;
   text-decoration: none;
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   line-height: 1;
   transition: 0.3s ease-in-out;
+  @include media('>=large') {
+    display: inline-flex;
+  }
   p {
     margin-bottom: initial;
     font-weight: 500;

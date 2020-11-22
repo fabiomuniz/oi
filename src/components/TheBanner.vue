@@ -36,14 +36,21 @@ export default {
   background: url('../assets/banner.jpg') no-repeat center center;
   background-size: cover;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
+  padding-bottom: 40px;
   &__grid {
     display: grid;
-    grid-template-columns: 60% auto;
-    margin-top: 5%;
-    padding: 0 10%;
+    grid-template-columns: 1fr;
+    margin-top: 35%;
+    grid-gap: 40px;
+    @include media('>=large') {
+      padding: 0 10%;
+      margin-top: 5%;
+      grid-template-columns: 60% auto;
+      grid-gap: initial;
+    }
     &__content {
       color: $color-white;
       h1 {
@@ -76,7 +83,10 @@ export default {
     }
     &__button {
       align-self: flex-end;
-      justify-self: end;
+      justify-self: center;
+      @include media('>=large') {
+        justify-self: end;
+      }
       a {
         padding: 15px 45px;
         margin-bottom: 40%;

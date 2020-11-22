@@ -18,12 +18,15 @@ export default {};
   background-color: transparent;
   text-transform: uppercase;
   text-decoration: none;
-  display: inline-block;
   line-height: 1;
   transition: 0.3s ease-in-out;
   font-weight: 700;
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  @include media('>=large') {
+    display: inline-flex;
+  }
   i {
     margin-left: 12px;
     font-size: 1.5em;

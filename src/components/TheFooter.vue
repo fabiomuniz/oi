@@ -34,9 +34,20 @@ export default {};
   color: $color-white;
   padding: 36px 0;
   &__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: block;
+    @include media('>=large') {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  &__logo,
+  &__contact,
+  &__hour {
+    margin-bottom: 40px;
+    @include media('>=large') {
+      margin-bottom: initial;
+    }
   }
   &__logo {
     display: flex;
@@ -67,7 +78,9 @@ export default {};
     }
   }
   &__hour {
-    text-align: right;
+    @include media('>=large') {
+      text-align: right;
+    }
   }
 }
 </style>

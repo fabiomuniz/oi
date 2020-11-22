@@ -239,8 +239,13 @@ export default {
     padding: 74px 0;
     &__wrapper {
       display: grid;
-      grid-template-columns: 30% 70%;
+      grid-template-columns: 1fr;
+      grid-gap: 40px;
       align-items: center;
+      @include media('>=large') {
+        grid-template-columns: 30% 70%;
+        grid-gap: initial;
+      }
     }
     &__text {
       max-width: 320px;
@@ -249,6 +254,10 @@ export default {
         font-size: clamp(1em, calc(1em + 3vw), 2.8125em);
         font-weight: 700;
         margin-bottom: 40px;
+        text-align: center;
+        @include media('>=large') {
+          text-align: left;
+        }
       }
       p {
         margin-bottom: 40px;
@@ -261,14 +270,23 @@ export default {
     }
     &__itens {
       display: grid;
-      grid-template-columns: repeat(2, 394px);
+      grid-template-columns: 1fr;
       grid-gap: 36px;
-      justify-self: end;
+      justify-self: center;
+      width: 100%;
+      @include media('>=large') {
+        width: initial;
+        justify-self: end;
+        grid-template-columns: repeat(2, 394px);
+      }
       &__option {
         border-radius: 20px;
         color: $color-white;
-        padding: 32px 50px;
+        padding: 32px 0;
         @extend %bg-gradient;
+        @include media('>=large') {
+          padding: 32px 50px;
+        }
         h4 {
           text-align: center;
           font-weight: 500;
@@ -276,14 +294,30 @@ export default {
         }
         h3 {
           font-size: clamp(1em, calc(1em + 3vw), 3.75em);
+          text-align: center;
+          @include media('>=large') {
+            text-align: initial;
+          }
         }
         &__price {
-          margin-top: 28px;
-          margin-bottom: 37px;
+          max-width: 85%;
+          margin: 28px auto 37px;
+          display: block;
+          @include media('>=large') {
+            max-width: 100%;
+          }
         }
         ol,
         ul {
           list-style: none;
+          li {
+            text-align: center;
+            justify-content: center;
+            @include media('>=large') {
+              text-align: left;
+              justify-content: start;
+            }
+          }
         }
         ul {
           li {
@@ -297,14 +331,16 @@ export default {
           }
         }
         a {
-          width: 100%;
+          width: 90%;
           height: 56px;
           display: flex;
           align-items: center;
           justify-content: center;
           border-radius: 28px;
-          margin-top: 34px;
-          margin-bottom: 27px;
+          margin: 34px auto 27px;
+          @include media('>=large') {
+            width: 100%;
+          }
         }
         &__colection {
           display: flex;
@@ -324,9 +360,12 @@ export default {
         ol {
           margin-top: 25px;
           display: grid;
-          grid-template-columns: repeat(2, max-content);
+          grid-template-columns: 1fr;
           grid-gap: 0 15px;
           align-items: center;
+          @include media('>=large') {
+            grid-template-columns: repeat(2, max-content);
+          }
           li {
             margin-bottom: 5px;
             i {
@@ -339,12 +378,17 @@ export default {
   }
 
   &__why {
-    background: url('../assets/bg_why.jpg') no-repeat right top;
-    background-size: auto 100%;
-    padding: 131px 0;
+    padding: 50px 0;
+    @include media('>=large') {
+      background: url('../assets/bg_why.jpg') no-repeat right top;
+      background-size: auto 100%;
+      padding: 131px 0;
+    }
     &__wrapper {
       max-width: 500px;
-      margin-left: 10%;
+      @include media('>=large') {
+        margin-left: 10%;
+      }
     }
     h2 {
       @extend %text-gradient;
@@ -352,6 +396,10 @@ export default {
       line-height: 1.125;
       text-transform: uppercase;
       margin-bottom: 57px;
+      text-align: center;
+      @include media('>=large') {
+        text-align: left;
+      }
       span {
         display: block;
       }
@@ -366,8 +414,11 @@ export default {
         font-size: clamp(1em, calc(1em + 3vw), 1.5625em);
         font-weight: 500;
         i {
-          margin-right: 10px;
+          margin-right: 20px;
           color: $color-primary;
+          @include media('>=large') {
+            margin-right: 10px;
+          }
         }
       }
     }
@@ -391,14 +442,22 @@ export default {
     color: $color-white;
     &__wrapper {
       display: grid;
-      grid-template-columns: max-content auto;
+      grid-template-columns: 1fr;
       grid-gap: 7vw;
       align-items: center;
+      @include media('>=large') {
+        grid-template-columns: max-content auto;
+      }
     }
     &__brands {
       display: grid;
-      grid-template-columns: repeat(2, 291px);
+      grid-template-columns: 1fr;
       grid-gap: 18px;
+      grid-row: 2;
+      @include media('>=large') {
+        grid-row: 1;
+        grid-template-columns: repeat(2, 291px);
+      }
       figure {
         width: 100%;
         height: 215px;
@@ -450,10 +509,18 @@ export default {
     background-size: cover;
     padding-top: 40px;
     &__wrapper {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 6vw;
-      align-items: center;
+      @include media('>=large') {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 6vw;
+        align-items: center;
+      }
+    }
+    img {
+      display: none;
+      @include media('>=large') {
+        display: block;
+      }
     }
     &__content {
       h2 {
@@ -465,7 +532,9 @@ export default {
       p {
         margin-bottom: 45px;
         span {
-          display: block;
+          @include media('>=large') {
+            display: block;
+          }
         }
       }
       a {
