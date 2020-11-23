@@ -1,6 +1,6 @@
 <template>
   <a
-    href="https://api.whatsapp.com/send?phone=+5541999999999&text=Informações planos"
+    href="https://api.whatsapp.com/send?phone=+5551985446830"
     class="contact"
     target="_blank"
   >
@@ -41,18 +41,13 @@
     @extend %text-gradient;
   }
   &--border-primary {
-    @extend %text-gradient;
+    color: $color-secondary;
     border: 3px solid $color-secondary;
     @include media('>=large') {
       &:hover {
-        border: 3px solid $color-gray;
-        color: $color-gray;
-        background: -webkit-linear-gradient(left, $color-gray, $color-gray);
-        background: -o-linear-gradient(right, $color-gray, $color-gray);
-        background: -moz-linear-gradient(right, $color-gray, $color-gray);
-        background: linear-gradient(to right, $color-gray, $color-gray);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        border: 3px solid $color-primary;
+        color: $color-white;
+        background-color: $color-primary;
       }
     }
   }
