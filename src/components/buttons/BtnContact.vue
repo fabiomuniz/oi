@@ -9,10 +9,6 @@
   </a>
 </template>
 
-<script>
-export default {};
-</script>
-
 <style lang="scss">
 .contact {
   background-color: transparent;
@@ -34,6 +30,12 @@ export default {};
   &--white {
     border: 3px solid $color-white;
     color: $color-white;
+    @include media('>=large') {
+      &:hover {
+        background-color: $color-white;
+        color: $color-primary;
+      }
+    }
   }
   &--text-primary {
     @extend %text-gradient;
@@ -41,6 +43,18 @@ export default {};
   &--border-primary {
     @extend %text-gradient;
     border: 3px solid $color-secondary;
+    @include media('>=large') {
+      &:hover {
+        border: 3px solid $color-gray;
+        color: $color-gray;
+        background: -webkit-linear-gradient(left, $color-gray, $color-gray);
+        background: -o-linear-gradient(right, $color-gray, $color-gray);
+        background: -moz-linear-gradient(right, $color-gray, $color-gray);
+        background: linear-gradient(to right, $color-gray, $color-gray);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
   }
 }
 </style>

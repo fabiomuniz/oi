@@ -3,6 +3,7 @@
     <TheHeader />
     <router-view />
     <TheFooter />
+    <MdContact />
   </div>
 </template>
 

@@ -75,6 +75,12 @@ export default {};
       font-weight: 700;
       color: $color-white;
       text-decoration: none;
+      transition: 0.3s ease-in-out;
+      @include media('>=large') {
+        &:hover {
+          color: $color-gray;
+        }
+      }
     }
   }
   &__hour {

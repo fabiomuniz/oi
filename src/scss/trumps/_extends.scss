@@ -17,6 +17,15 @@
   );
 }
 
+%bg-white {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
 %border-gradient {
   border: 3px solid;
   border-radius: 20px;
