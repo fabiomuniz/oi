@@ -446,7 +446,8 @@ export default {
       grid-gap: 7vw;
       align-items: center;
       @include media('>=large') {
-        grid-template-columns: max-content auto;
+        grid-template-columns: max-content max-content;
+        justify-content: center;
       }
     }
     &__brands {
